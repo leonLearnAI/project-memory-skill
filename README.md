@@ -6,14 +6,15 @@
 
 A Claude skill for maintaining long-term project stability in AI-assisted development.
 
-> **Status:** v1.0.0, early release. The design is complete and self-consistent, but it has not yet been hardened by large-scale real-world use. If you try it, please file a [field report](.github/ISSUE_TEMPLATE/field-report.md) — that feedback is what drives the next version.
+> **Status:** v1.1.0, early release. The design is complete and self-consistent, but it has not yet been hardened by large-scale real-world use. If you try it, please file a [field report](.github/ISSUE_TEMPLATE/field-report.md) — that feedback is what drives the next version.
 
 ## Quick install
 
-**Recommended — plugin install (one command):**
+**Recommended — plugin install (two commands):**
 
 ```bash
-claude plugin install https://github.com/leonLearnAI/project-memory-skill
+claude plugin marketplace add https://github.com/leonLearnAI/project-memory-skill
+claude plugin install project-memory
 ```
 
 **Alternative — manual git clone:**
@@ -88,7 +89,8 @@ All other operations: just ask the agent in natural language.
 **Plugin install (recommended):**
 
 ```bash
-claude plugin install https://github.com/leonLearnAI/project-memory-skill
+claude plugin marketplace add https://github.com/leonLearnAI/project-memory-skill
+claude plugin install project-memory
 ```
 
 **Manual install:**
@@ -152,14 +154,15 @@ Use `[skill-feedback {your pain point}]` inside any project to record issues. Ma
 
 一个用于 AI 辅助开发中保持项目长期稳定性的 Claude skill。
 
-> **状态：** v1.0.0，早期版本。设计已完整且自洽，但尚未经过大规模真实使用的打磨。如果你试用了，请提交一份[实地报告](.github/ISSUE_TEMPLATE/field-report.md)——这些反馈是驱动下一版的关键。
+> **状态：** v1.1.0，早期版本。设计已完整且自洽，但尚未经过大规模真实使用的打磨。如果你试用了，请提交一份[实地报告](.github/ISSUE_TEMPLATE/field-report.md)——这些反馈是驱动下一版的关键。
 
 ## 快速安装
 
-**推荐 — plugin 一键安装：**
+**推荐 — plugin 两步安装：**
 
 ```bash
-claude plugin install https://github.com/leonLearnAI/project-memory-skill
+claude plugin marketplace add https://github.com/leonLearnAI/project-memory-skill
+claude plugin install project-memory
 ```
 
 **备选 — 手动 git clone：**
@@ -234,7 +237,8 @@ cp -r /tmp/project-memory-skill/skills/project-memory .claude/skills/project-mem
 **Plugin 安装（推荐）：**
 
 ```bash
-claude plugin install https://github.com/leonLearnAI/project-memory-skill
+claude plugin marketplace add https://github.com/leonLearnAI/project-memory-skill
+claude plugin install project-memory
 ```
 
 **手动安装：**

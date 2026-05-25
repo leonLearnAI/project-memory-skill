@@ -1,0 +1,23 @@
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Test artifacts — if you test this skill on a real project,
+# don't accidentally commit that project's memory into the skill repo
+.project-memory/
+.project-memory-backup-*/
+*-report.md
+inconsistencies.md
+
+# Logs and temp
+*.log
+tmp/
+.cache/

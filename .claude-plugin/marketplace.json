@@ -1,0 +1,15 @@
+{
+    "name": "project-memory",
+    "owner": {
+        "name": "Leon",
+        "email": ""
+    },
+    "description": "Maintain long-term project stability through structured memory.",
+    "plugins": [
+        {
+            "name": "project-memory",
+            "source": ".",
+            "description": "Maintain long-term project stability through structured memory of requirements, architecture, tests, and decisions."
+        }
+    ]
+}

@@ -10,15 +10,25 @@ A Claude skill for maintaining long-term project stability in AI-assisted develo
 
 ## Quick install
 
-```bash
-# Personal (available in all projects)
-git clone https://github.com/leonLearnAI/project-memory-skill.git ~/.claude/skills/project-memory
+**Recommended — plugin install (one command):**
 
-# Project-level (shared with collaborators who clone the repo)
-git clone https://github.com/leonLearnAI/project-memory-skill.git .claude/skills/project-memory
+```bash
+claude plugin install https://github.com/leonLearnAI/project-memory-skill
 ```
 
-Then start a new Claude Code session and run `[skill-init]` in your project. Verify the path with `ls ~/.claude/skills/project-memory/SKILL.md`.
+**Alternative — manual git clone:**
+
+```bash
+# Personal (available in all projects)
+git clone https://github.com/leonLearnAI/project-memory-skill.git /tmp/project-memory-skill
+cp -r /tmp/project-memory-skill/skills/project-memory ~/.claude/skills/project-memory
+
+# Project-level (shared with collaborators who clone the repo)
+git clone https://github.com/leonLearnAI/project-memory-skill.git /tmp/project-memory-skill
+cp -r /tmp/project-memory-skill/skills/project-memory .claude/skills/project-memory
+```
+
+Then start a new Claude Code session and run `[skill-init]` in your project.
 
 ## What problem does this solve?
 
@@ -75,25 +85,42 @@ All other operations: just ask the agent in natural language.
 
 ## Installation
 
-1. Place this `project-memory-skill/` folder in your Claude skills directory:
-   - Claude Code: `~/.claude/skills/` (user-level) or `.claude/skills/` (project-level).
-   - Verify SKILL.md is at the folder root.
-2. In a project: ask Claude `[skill-init]` to initialize.
-3. Choose your tier when prompted.
+**Plugin install (recommended):**
+
+```bash
+claude plugin install https://github.com/leonLearnAI/project-memory-skill
+```
+
+**Manual install:**
+
+```bash
+git clone https://github.com/leonLearnAI/project-memory-skill.git /tmp/project-memory-skill
+cp -r /tmp/project-memory-skill/skills/project-memory ~/.claude/skills/project-memory
+```
+
+Then in a project, run `[skill-init]` and choose your tier when prompted.
 
 ## File Structure
 
 ```
 project-memory-skill/
-├── SKILL.md                    ← Main skill definition
+├── .claude-plugin/
+│   └── plugin.json             ← Plugin manifest
+├── skills/
+│   └── project-memory/
+│       ├── SKILL.md            ← Main skill definition
+│       └── references/
+│           ├── file-formats.md     ← Detailed file schemas
+│           ├── workflows.md        ← Six workflows step-by-step
+│           ├── failure-modes.md    ← 10 failure modes & recovery
+│           ├── observability.md    ← Health metrics
+│           └── style-examples.md   ← Good vs bad documentation
+├── .github/
+│   └── ISSUE_TEMPLATE/
+│       ├── field-report.md     ← Real-world usage report template
+│       └── bug_report.md       ← Bug report template
 ├── MIGRATIONS.md               ← Version migration steps
-├── README.md                   ← This file
-└── references/
-    ├── file-formats.md         ← Detailed file schemas
-    ├── workflows.md            ← Six workflows step-by-step
-    ├── failure-modes.md        ← 10 failure modes & recovery
-    ├── observability.md        ← Health metrics
-    └── style-examples.md       ← Good vs bad documentation
+└── README.md                   ← This file
 ```
 
 ## Design Philosophy
@@ -129,15 +156,25 @@ Use `[skill-feedback {your pain point}]` inside any project to record issues. Ma
 
 ## 快速安装
 
-```bash
-# 个人级（所有项目可用）
-git clone https://github.com/leonLearnAI/project-memory-skill.git ~/.claude/skills/project-memory
+**推荐 — plugin 一键安装：**
 
-# 项目级（与克隆仓库的协作者共享）
-git clone https://github.com/leonLearnAI/project-memory-skill.git .claude/skills/project-memory
+```bash
+claude plugin install https://github.com/leonLearnAI/project-memory-skill
 ```
 
-然后开一个新的 Claude Code 会话，在项目里运行 `[skill-init]`。用 `ls ~/.claude/skills/project-memory/SKILL.md` 验证路径。
+**备选 — 手动 git clone：**
+
+```bash
+# 个人级（所有项目可用）
+git clone https://github.com/leonLearnAI/project-memory-skill.git /tmp/project-memory-skill
+cp -r /tmp/project-memory-skill/skills/project-memory ~/.claude/skills/project-memory
+
+# 项目级（与克隆仓库的协作者共享）
+git clone https://github.com/leonLearnAI/project-memory-skill.git /tmp/project-memory-skill
+cp -r /tmp/project-memory-skill/skills/project-memory .claude/skills/project-memory
+```
+
+然后开一个新的 Claude Code 会话，在项目里运行 `[skill-init]`。
 
 ## 解决什么问题？
 
@@ -194,25 +231,42 @@ git clone https://github.com/leonLearnAI/project-memory-skill.git .claude/skills
 
 ## 安装
 
-1. 把这个 `project-memory-skill/` 文件夹放到 Claude skills 目录：
-   - Claude Code：`~/.claude/skills/`（用户级）或 `.claude/skills/`（项目级）。
-   - 确认 SKILL.md 在文件夹根部。
-2. 在项目中：让 Claude 执行 `[skill-init]` 初始化。
-3. 提示时选择档位。
+**Plugin 安装（推荐）：**
+
+```bash
+claude plugin install https://github.com/leonLearnAI/project-memory-skill
+```
+
+**手动安装：**
+
+```bash
+git clone https://github.com/leonLearnAI/project-memory-skill.git /tmp/project-memory-skill
+cp -r /tmp/project-memory-skill/skills/project-memory ~/.claude/skills/project-memory
+```
+
+然后在项目中运行 `[skill-init]`，提示时选择档位。
 
 ## 文件结构
 
 ```
 project-memory-skill/
-├── SKILL.md                    ← 主 skill 定义
+├── .claude-plugin/
+│   └── plugin.json             ← Plugin 清单
+├── skills/
+│   └── project-memory/
+│       ├── SKILL.md            ← 主 skill 定义
+│       └── references/
+│           ├── file-formats.md     ← 详细文件格式
+│           ├── workflows.md        ← 六个工作流完整步骤
+│           ├── failure-modes.md    ← 10种失败模式与恢复
+│           ├── observability.md    ← 健康指标
+│           └── style-examples.md   ← 文档好例与坏例
+├── .github/
+│   └── ISSUE_TEMPLATE/
+│       ├── field-report.md     ← 实地报告模板
+│       └── bug_report.md       ← Bug 报告模板
 ├── MIGRATIONS.md               ← 版本迁移步骤
-├── README.md                   ← 本文件
-└── references/
-    ├── file-formats.md         ← 详细文件格式
-    ├── workflows.md            ← 六个工作流完整步骤
-    ├── failure-modes.md        ← 10种失败模式与恢复
-    ├── observability.md        ← 健康指标
-    └── style-examples.md       ← 文档好例与坏例
+└── README.md                   ← 本文件
 ```
 
 ## 设计哲学

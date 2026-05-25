@@ -1,0 +1,13 @@
+{
+  "name": "project-memory",
+  "version": "1.0.0",
+  "description": "Maintain long-term project stability through structured memory of requirements, architecture, tests, and decisions.",
+  "author": {
+    "name": "Leon",
+    "url": "https://github.com/leonLearnAI"
+  },
+  "homepage": "https://github.com/leonLearnAI/project-memory-skill",
+  "repository": "https://github.com/leonLearnAI/project-memory-skill",
+  "license": "MIT",
+  "keywords": ["project-memory", "requirements", "architecture", "vibe-coding", "adr", "changelog"]
+}

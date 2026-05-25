@@ -1,6 +1,6 @@
 # Project Memory Skill
 
-![version](https://img.shields.io/badge/version-1.0.0-blue)
+![version](https://img.shields.io/badge/version-1.1.0-blue)
 ![license](https://img.shields.io/badge/license-MIT-green)
 ![status](https://img.shields.io/badge/status-early%20(seeking%20field%20reports)-orange)
 
@@ -138,7 +138,7 @@ Documents do not replace code — they make code findable, intent recoverable, a
 
 ## Version
 
-1.0.0 — Initial release.
+1.1.0 — Fix marketplace source format for remote plugin install.
 
 ## Feedback
 
@@ -284,7 +284,7 @@ project-memory-skill/
 
 ## 版本
 
-1.0.0 — 初始版本。
+1.1.0 — 修复 marketplace source 格式以支持远程 plugin 安装。
 
 ## 反馈
 

@@ -17,6 +17,16 @@ Changes collected from real-world use, pending the next release.
 
 ---
 
+## [1.1.0] - 2026-05-25
+
+### Fixed
+- `marketplace.json` plugin source format: replaced unsupported string `"."` with the required object format `{"source": "url", "url": "..."}`, enabling `claude plugin install project-memory` to work correctly.
+
+### Changed
+- Added `version` field to the plugin entry in `marketplace.json`.
+
+---
+
 ## [1.0.0] - 2026-05-21
 
 Initial release.
@@ -39,5 +49,6 @@ Initial release.
 - Multi-agent locking is advisory only.
 - Document bloat relies on the style contract; not auto-detected.
 
-[Unreleased]: https://github.com/leonLearnAI/project-memory-skill/compare/v1.0.0...HEAD
+[Unreleased]: https://github.com/leonLearnAI/project-memory-skill/compare/v1.1.0...HEAD
+[1.1.0]: https://github.com/leonLearnAI/project-memory-skill/compare/v1.0.0...v1.1.0
 [1.0.0]: https://github.com/leonLearnAI/project-memory-skill/releases/tag/v1.0.0

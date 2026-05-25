@@ -1,6 +1,6 @@
 {
   "name": "project-memory",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Maintain long-term project stability through structured memory of requirements, architecture, tests, and decisions.",
   "author": {
     "name": "Leon",
